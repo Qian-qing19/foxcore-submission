@@ -1,0 +1,95 @@
+.loading-card,
+.empty {
+  color: #74827e;
+  text-align: center;
+}
+
+.list-summary {
+  align-items: center;
+  color: #153f36;
+  display: flex;
+  font-size: 32rpx;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.total-count {
+  color: #74827e;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+.sale-card {
+  margin-bottom: 18rpx;
+  padding: 24rpx;
+}
+
+.sale-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sale-no {
+  color: #153f36;
+  font-size: 29rpx;
+  font-weight: 700;
+}
+
+.status {
+  border-radius: 999rpx;
+  font-size: 22rpx;
+  padding: 5rpx 16rpx;
+}
+
+.status-normal {
+  background: #e4f3ee;
+  color: #146c5a;
+}
+
+.status-pending {
+  background: #fff4dd;
+  color: #8a621d;
+}
+
+.status-void {
+  background: #f8e7e5;
+  color: #a84138;
+}
+
+.sale-body {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18rpx;
+}
+
+.sale-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sale-time {
+  color: #596a65;
+  font-size: 25rpx;
+}
+
+.sale-items {
+  color: #8a9894;
+  font-size: 23rpx;
+  margin-top: 4rpx;
+}
+
+.sale-amount {
+  color: #146c5a;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.list-footer {
+  color: #8a9894;
+  font-size: 23rpx;
+  padding: 28rpx 0 12rpx;
+  text-align: center;
+}

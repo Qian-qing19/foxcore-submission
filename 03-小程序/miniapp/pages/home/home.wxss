@@ -1,0 +1,119 @@
+.page-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+}
+
+.welcome-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-title {
+  color: #153f36;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.welcome-subtitle {
+  color: #74827e;
+  font-size: 25rpx;
+  margin-top: 6rpx;
+}
+
+.logout-button {
+  background: transparent;
+  color: #146c5a;
+  font-size: 25rpx;
+  line-height: 1;
+  margin: 0;
+  padding: 18rpx 0;
+}
+
+.loading-card {
+  color: #74827e;
+  text-align: center;
+}
+
+.shift-card {
+  margin-bottom: 34rpx;
+}
+
+.event-name {
+  color: #146c5a;
+  display: block;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 18rpx;
+}
+
+.shift-row {
+  display: flex;
+  font-size: 27rpx;
+  margin-top: 10rpx;
+}
+
+.shift-label {
+  color: #74827e;
+  flex: 0 0 88rpx;
+}
+
+.shift-value {
+  color: #2f423d;
+  flex: 1;
+}
+
+.no-shift {
+  background: #fff8e8;
+  border: 1rpx solid #f0dfb7;
+  border-radius: 12rpx;
+  color: #8a621d;
+  padding: 24rpx;
+}
+
+.summary-title {
+  margin-bottom: 18rpx;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 18rpx;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 34rpx;
+}
+
+.summary-card {
+  background: #ffffff;
+  border: 1rpx solid #e1ebe7;
+  border-radius: 18rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+
+.summary-card-wide {
+  grid-column: span 2;
+}
+
+.summary-label {
+  color: #74827e;
+  font-size: 25rpx;
+}
+
+.summary-value {
+  color: #153f36;
+  font-size: 38rpx;
+  font-weight: 700;
+  margin-top: 10rpx;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.action-button {
+  width: 100%;
+}

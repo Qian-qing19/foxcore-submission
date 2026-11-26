@@ -1,0 +1,84 @@
+<view class="container">
+  <view wx:if="{{loading}}" class="card loading-card">正在加载班次与产品...</view>
+
+  <block wx:else>
+    <view class="card shift-card">
+      <view class="section-title">当前班次</view>
+      <text class="shift-event">{{shift.event_name}}</text>
+      <text class="shift-meta">{{shift.booth_code}} · {{shift.location}}</text>
+    </view>
+
+    <view class="card form-card">
+      <view class="section-title">选择产品</view>
+      <picker
+        mode="selector"
+        range="{{productOptions}}"
+        value="{{productIndex}}"
+        bindchange="onProductChange"
+      >
+        <view class="picker-field">{{selectedProductLabel}}</view>
+      </picker>
+
+      <view class="input-row">
+        <view class="input-group">
+          <text class="field-label">数量</text>
+          <input
+            class="field-input"
+            type="number"
+            value="{{quantity}}"
+            placeholder="请输入正整数"
+            bindinput="onQuantityInput"
+          />
+        </view>
+        <view class="input-group">
+          <text class="field-label">单价（元）</text>
+          <input
+            class="field-input"
+            type="digit"
+            value="{{unitPrice}}"
+            placeholder="请输入单价"
+            bindinput="onUnitPriceInput"
+          />
+        </view>
+      </view>
+
+      <text class="min-price">最低售价：¥{{selectedProductMinPrice}}</text>
+      <button class="btn-secondary add-button" bindtap="onAddItem">加入清单</button>
+    </view>
+
+    <view class="card cart-card">
+      <view class="cart-header">
+        <view class="section-title cart-title">销售清单</view>
+        <text class="cart-count">{{cartCount}} 项</text>
+      </view>
+
+      <view wx:if="{{!hasItems}}" class="empty">还没有加入销售明细</view>
+
+      <view wx:for="{{cart}}" wx:key="key" class="cart-item">
+        <view class="cart-item-main">
+          <text class="cart-item-name">{{item.productCode}} {{item.name}}</text>
+          <text class="cart-item-meta">{{item.quantity}} × ¥{{item.unitPriceYuan}}</text>
+        </view>
+        <view class="cart-item-side">
+          <text class="line-amount">¥{{item.lineAmountYuan}}</text>
+          <button
+            class="remove-button"
+            data-index="{{index}}"
+            catchtap="onRemoveItem"
+          >删除</button>
+        </view>
+      </view>
+
+      <view class="total-row">
+        <text>合计</text>
+        <text class="total-amount">¥{{totalYuan}}</text>
+      </view>
+      <button
+        class="btn-primary submit-button"
+        loading="{{submitting}}"
+        disabled="{{!hasItems || submitting}}"
+        bindtap="onSubmit"
+      >提交销售</button>
+    </view>
+  </block>
+</view>

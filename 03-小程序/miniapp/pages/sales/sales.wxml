@@ -1,0 +1,33 @@
+<view class="container">
+  <view wx:if="{{firstLoading && sales.length === 0}}" class="card loading-card">
+    正在加载销售记录...
+  </view>
+
+  <view wx:elif="{{!loading && sales.length === 0}}" class="card empty">
+    还没有销售记录
+  </view>
+
+  <block wx:else>
+    <view class="list-summary">
+      <text>我的销售</text>
+      <text class="total-count">共 {{total}} 笔</text>
+    </view>
+
+    <view wx:for="{{sales}}" wx:key="sale_id" class="card sale-card">
+      <view class="sale-header">
+        <text class="sale-no">{{item.saleNo}}</text>
+        <text class="status {{item.statusClass}}">{{item.status}}</text>
+      </view>
+      <view class="sale-body">
+        <view class="sale-info">
+          <text class="sale-time">{{item.timeDisplay}}</text>
+          <text class="sale-items">共 {{item.item_count}} 件商品</text>
+        </view>
+        <text class="sale-amount">¥{{item.amountYuan}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{loadingMore}}" class="list-footer">加载中...</view>
+    <view wx:elif="{{!hasMore && sales.length > 0}}" class="list-footer">已加载全部销售记录</view>
+  </block>
+</view>

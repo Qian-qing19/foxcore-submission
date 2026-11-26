@@ -1,0 +1,67 @@
+page {
+  background: #f4f7f6;
+  color: #1f2d2a;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+view,
+text,
+input,
+button {
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 32rpx;
+}
+
+.card {
+  background: #ffffff;
+  border: 1rpx solid #e1ebe7;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(20, 108, 90, 0.06);
+  padding: 28rpx;
+}
+
+.section-title {
+  color: #153f36;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+.muted {
+  color: #74827e;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 14rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.btn-primary {
+  background: #146c5a;
+  color: #ffffff;
+}
+
+.btn-primary[disabled] {
+  background: #a9c4bc;
+  color: #f7faf9;
+}
+
+.btn-secondary {
+  background: #e8f2ef;
+  color: #146c5a;
+}
+
+.empty {
+  color: #74827e;
+  padding: 64rpx 24rpx;
+  text-align: center;
+}
