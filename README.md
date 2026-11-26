@@ -19,7 +19,3 @@
 - 名称：学生零售记账本
 - AppID：`wx0a07fbac98189ea3`
 - 使用方式：微信扫码打开体验版，登录 `sales01 / 123456`
-
-## 说明
-
-系统源码与自动化测试位于另一仓库：<https://github.com/Qian-qing19/foxcore-sales>
